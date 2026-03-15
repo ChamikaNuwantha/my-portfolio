@@ -103,7 +103,7 @@ export default function Intro() {
           transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
           className="flex-shrink-0 flex items-center justify-center lg:justify-end"
         >
-          <div className="relative w-64 h-72 sm:w-72 sm:h-80">
+          <div className="relative w-100 h-100 sm:w-100 sm:h-100">
             {/* Gradient border accent */}
             <div className="absolute -inset-[2px] rounded-2xl bg-gradient-to-br from-primary/60 via-transparent to-primary/20" />
             {/* Photo */}
