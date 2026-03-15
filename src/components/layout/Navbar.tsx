@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Camera, Code } from 'lucide-react';
+import Image from 'next/image';
+import { Menu, X, Code } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import clsx from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -43,9 +44,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2 text-xl font-bold tracking-tighter hover:text-primary transition-colors">
-            <Code className="w-6 h-6 text-primary" />
-            <span>Dev<span className="text-primary">&</span>Lens</span>
-            <Camera className="w-5 h-5 text-muted-foreground ml-1" />
+            <Image src="/assets/logo.png" alt="Logo" width={50} height={50} />
           </Link>
 
           {/* Desktop Nav */}

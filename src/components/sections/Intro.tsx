@@ -13,8 +13,7 @@ const socialLinks = [
 
 export default function Intro() {
   return (
-    <section id="intro" className="min-h-[90vh] flex flex-col justify-center relative pt-20">
-
+    <section id="intro" className="min-h-[90vh] flex flex-col justify-center relative">
       {/* Background ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] -z-10 opacity-50" />
 
@@ -103,7 +102,7 @@ export default function Intro() {
           transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
           className="flex-shrink-0 flex items-center justify-center lg:justify-end"
         >
-          <div className="relative w-64 h-72 sm:w-72 sm:h-80">
+          <div className="relative w-100 h-100 sm:w-100 sm:h-100">
             {/* Gradient border accent */}
             <div className="absolute -inset-[2px] rounded-2xl bg-gradient-to-br from-primary/60 via-transparent to-primary/20" />
             {/* Photo */}
