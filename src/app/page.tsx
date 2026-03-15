@@ -8,7 +8,7 @@ import Contact from '@/components/sections/Contact';
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col gap-24 md:gap-32 w-full pt-10">
+      <div className="flex flex-col gap-24 md:gap-32 w-full">
         <Intro />
         <About />
         <Experience />
@@ -16,12 +16,6 @@ export default function Home() {
         <Contact />
       </div>
 
-      <footer className="w-full text-center py-8 text-sm text-muted-foreground/80 font-mono">
-        <p>Built by Chamika Nuwantha.</p>
-        <p className="mt-2 text-xs opacity-75">
-          Designed with Node & Next.js. Deployed on Vercel.
-        </p>
-      </footer>
     </>
   );
 }

@@ -16,8 +16,8 @@ export function cn(...inputs: (string | undefined | null | false)[]) {
 const navLinks = [
   { name: 'Intro', href: '/#intro' },
   { name: 'About', href: '/#about' },
-  { name: 'Projects', href: '/#projects' },
   { name: 'Experience', href: '/#experience' },
+  { name: 'Projects', href: '/#projects' },
   { name: 'Photography', href: '/photography' },
   { name: 'Contact', href: '/#contact' },
 ];
