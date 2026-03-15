@@ -23,14 +23,11 @@ export default function RootLayout({
     <html lang="en" className="dark scroll-smooth">
       <body className={`${inter.variable} antialiased min-h-screen flex flex-col`}>
         <Navbar />
-        <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
+        <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
           {children}
         </main>
-        <footer className="w-full text-center py-8 text-sm text-muted-foreground/80 font-mono">
-          <p>Built by Chamika Nuwantha.</p>
-          <p className="mt-2 text-xs opacity-75">
-            Designed with Node & Next.js. Deployed on Vercel.
-          </p>
+        <footer className="w-full text-center py-8 text-xs text-muted-foreground/40 font-mono">
+          <p>Built by Chamika Nuwantha</p>
         </footer>
       </body>
     </html>

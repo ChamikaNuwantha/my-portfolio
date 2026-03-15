@@ -14,7 +14,7 @@ const photos = [
 
 export default function Photography() {
   return (
-    <section id="photography" className="py-24">
+    <section id="photography" className="py-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -22,7 +22,7 @@ export default function Photography() {
         transition={{ duration: 0.5 }}
       >
         <h2 className="text-3xl md:text-5xl font-bold mb-12 flex items-center gap-4">
-          <span className="text-primary font-mono text-xl md:text-2xl">04.</span>
+          <span className="text-primary font-mono text-xl md:text-2xl"></span>
           Through The Lens
           <div className="h-[1px] bg-muted flex-grow ml-4 max-w-xs" />
         </h2>
