@@ -86,7 +86,7 @@ export default function Navbar() {
                 className={cn(
                   "px-4 py-2 text-sm font-medium transition-all duration-300 rounded-xl",
                   isActive 
-                    ? "bg-[#fd853a] text-white shadow-lg shadow-[#fd853a]/20" 
+                    ? "bg-[#1e3a8a] text-white shadow-lg shadow-[#1e3a8a]/20" 
                     : "text-black/60 hover:text-black hover:bg-black/5"
                 )}
               >
@@ -126,7 +126,7 @@ export default function Navbar() {
                     className={cn(
                       "px-4 py-3 rounded-xl text-lg font-medium transition-all duration-300",
                       isActive 
-                        ? "bg-[#fd853a] text-white" 
+                        ? "bg-[#1e3a8a] text-white" 
                         : "text-white/70 hover:bg-white/5 hover:text-white"
                     )}
                   >
