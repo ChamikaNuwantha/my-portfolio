@@ -69,7 +69,7 @@ export default function Navbar() {
               alt="Logo" 
               width={40} 
               height={40} 
-              className="transition-transform group-hover:scale-110 object-contain"
+              className="transition-transform group-hover:scale-110 object-contain drop-shadow-lg"
             />
           </Link>
         </div>
