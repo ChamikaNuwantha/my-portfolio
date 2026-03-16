@@ -1,138 +1,127 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { Star, ArrowUpRight, Download } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
-
-const socialLinks = [
-  { icon: Github, href: 'https://github.com/ChamikaNuwantha', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com/in/chamika-nuwantha', label: 'LinkedIn' },
-  { icon: Mail, href: 'mailto:chamikanuwantha@gmail.com', label: 'Email' },
-];
 
 export default function Intro() {
   return (
-    <section id="intro" className="min-h-[90vh] flex flex-col justify-center relative pt-20">
-      {/* Background ambient glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] -z-10 opacity-50" />
+    <section id="intro" className="relative h-[calc(100vh-1rem)] flex flex-col items-center justify-center overflow-hidden pt-20 pb-4 px-4 rounded-[30px] md:rounded-[40px] mx-2 md:mx-4 my-2 shadow-sm bg-[#fcfcfc]">
+      
+      {/* Decorative background elements */}
+      <div className="absolute top-[10%] left-[8%] hidden lg:block opacity-10 transform -rotate-12 pointer-events-none">
+        <svg width="100" height="100" viewBox="0 0 120 120" fill="none">
+          <circle cx="60" cy="60" r="50" stroke="#fd853a" strokeWidth="1" strokeDasharray="8 8" />
+        </svg>
+      </div>
 
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 w-full">
+      {/* Badge (Top) */}
+      {/* <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        className="absolute top-24 md:top-28 px-5 py-1.5 rounded-full border border-black/10 bg-white shadow-sm flex items-center gap-2 z-30"
+      >
+        <span className="text-black font-medium tracking-tight text-xs md:text-sm">I&apos;m Chamika Nuwantha</span>
+      </motion.div> */}
 
-        {/* ── Left: Text content ── */}
-        <div className="flex-1 max-w-2xl">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <span className="text-primary font-mono font-medium tracking-wider uppercase text-sm mb-4 block">
-              Hi, my name is
-            </span>
-          </motion.div>
+      {/* Main Heading - Layered behind image */}
+      <div className="relative flex flex-col items-center z-10 text-center w-full max-w-5xl mb-[-4rem] md:mb-[-6rem] pt-10">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-[65px] font-bold tracking-tight text-black leading-[1] pointer-events-none"
+        >
+          Chamika <span className="text-[#fd853a]">Nuwantha</span><br />
+          Software Engineer
+        </motion.h1>
+      </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-5xl sm:text-7xl font-bold tracking-tight mb-4 text-foreground"
-          >
-            Chamika Nuwantha.
-          </motion.h1>
+      {/* Center Content: Image & Stats */}
+      <div className="relative w-full max-w-5xl flex flex-col items-center justify-end h-[450px] md:h-[600px]">
+        
+        {/* Background Semi-circle */}
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+          className="absolute bottom-0 w-[240px] h-[120px] sm:w-[400px] sm:h-[200px] md:w-[600px] md:h-[300px] bg-[#fd853a] rounded-t-full z-0 shadow-2xl"
+        />
 
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-3xl sm:text-5xl font-bold tracking-tight text-muted-foreground mb-6"
-          >
-            I build digital experiences &amp; capture moments.
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-lg text-muted-foreground/90 max-w-xl leading-relaxed mb-10"
-          >
-            I&apos;m an IT Graduate from the University of Moratuwa, specializing in building exceptional
-            web applications and IoT systems. When I&apos;m not coding, you&apos;ll find me behind a camera
-            lens capturing the world through photography.
-          </motion.p>
-
+        {/* Profile Image */}
+        <div className="relative z-20 w-fit h-full flex items-end justify-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-wrap items-center gap-6"
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="w-full max-w-sm h-full flex items-end justify-center relative"
           >
-            <a
-              href="/assets/resume.pdf"
-              download="Chamika_Nuwantha_Resume.pdf"
-              className="px-8 py-3.5 bg-primary font-medium rounded-full hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25"
-              style={{ color: '#ffffff' }}
-            >
-              Download Resume
-            </a>
-            <Link
-              href="#contact"
-              className="flex items-center gap-2 px-6 py-3.5 border border-border bg-background hover:bg-muted font-medium rounded-full transition-colors"
-            >
-              <Mail className="w-5 h-5" />
-              Get in touch
-            </Link>
-          </motion.div>
-
-          {/* Social Icons */}
-          <motion.div
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="flex items-center gap-5 mt-12"
-          >
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.label}
-                className="text-muted-foreground hover:text-primary transition-colors hover:-translate-y-1 transform duration-200"
-              >
-                <social.icon className="w-6 h-6" />
-              </a>
-            ))}
+            <Image
+              src="/assets/png.png"
+              alt="Chamika Nuwantha"
+              width={650}
+              height={850}
+              className="object-contain h-full w-auto select-none pointer-events-none drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+              priority
+            />
+            
+            {/* Action Buttons - clearly visible over the image and semi-circle */}
+            <div className="absolute bottom-12 flex flex-row items-center gap-3 z-30 w-fit justify-center">
+               <a 
+                 href="/assets/resume.pdf"
+                 download
+                 className="px-6 md:px-10 py-4 bg-[#fd853a] text-white rounded-full font-bold flex items-center justify-center gap-2 shadow-2xl hover:bg-[#e6762d] transition-all transform hover:scale-105 active:scale-95 group text-xs md:text-sm"
+               >
+                  Resume
+                  <Download className="w-5 h-5 group-hover:translate-y-0.5 transition-transform" />
+               </a>
+               <a 
+                 href="#contact"
+                 className="px-6 md:px-10 py-4 bg-white/10 backdrop-blur-xl border border-white/30 text-white rounded-full font-bold hover:bg-white/20 transition-all transform hover:scale-105 active:scale-95 text-xs md:text-sm shadow-xl"
+               >
+                  Hire me
+               </a>
+            </div>
           </motion.div>
         </div>
 
-        {/* ── Right: Profile photo ── */}
+        {/* Floating elements at edges */}
         <motion.div
-          initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
-          className="flex-shrink-0 flex items-center justify-center lg:justify-end"
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="absolute left-0 bottom-[20%] hidden xl:flex flex-col gap-2 max-w-[220px] bg-white/70 backdrop-blur-md p-4 rounded-2xl border border-black/5 shadow-sm z-30"
         >
-          <div className="relative w-100 h-100 sm:w-100 sm:h-100">
-            {/* Gradient border accent */}
-            <div className="absolute -inset-[2px] rounded-2xl bg-gradient-to-br from-primary/60 via-transparent to-primary/20" />
-            {/* Photo */}
-            <div className="relative w-full h-full rounded-2xl overflow-hidden border border-border/40 shadow-2xl shadow-black/50">
-              <Image
-                src="/assets/profile.jpg"
-                alt="Chamika Nuwantha"
-                fill
-                className="object-cover object-top"
-                priority
-              />
-              {/* Subtle scrim at bottom */}
-              <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
-            </div>
+          <div className="text-[#fd853a]">
+             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+               <path d="M5.017 16H8.017V23H5.017C3.9124 23 3.017 22.1046 3.017 21V18C3.017 16.8954 3.9124 16 5.017 16ZM16.017 16H19.017V23H16.017C14.9124 23 14.017 22.1046 14.017 21V18C14.017 16.8954 14.9124 16 16.017 16Z" />
+             </svg>
+          </div>
+          <p className="text-black/80 text-sm font-medium leading-relaxed italic">
+            &quot;I build digital experiences & capture moments. Specializing in exceptional web and IoT systems.&quot;
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="absolute right-0 bottom-[20%] hidden xl:flex flex-col items-end gap-2 bg-white/70 backdrop-blur-md p-4 rounded-2xl border border-black/5 shadow-sm z-30"
+        >
+          <div className="flex gap-1">
+            {[1, 2, 3, 4, 5].map((s) => (
+              <Star key={s} size={14} fill="#fd853a" color="#fd853a" />
+            ))}
+          </div>
+          <div className="text-right">
+            <h3 className="text-3xl font-bold text-black tabular-nums">1.5 <span className="text-lg font-normal text-black/60">Years</span></h3>
+            <p className="text-black/50 font-bold uppercase tracking-widest text-[8px]">Development Exp</p>
           </div>
         </motion.div>
 
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block"
-      >
-        <div className="flex flex-col items-center gap-2 text-muted-foreground animate-bounce">
-          <span className="text-xs font-mono uppercase tracking-widest">Scroll</span>
-          <ArrowDown className="w-4 h-4" />
-        </div>
-      </motion.div>
+      
     </section>
   );
 }
