@@ -58,7 +58,7 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 flex flex-col items-center px-4 py-4">
       <nav
         className={cn(
-          "flex items-center justify-between px-6 py-3 transition-all duration-300 w-full max-w-7xl"
+          "flex items-center bg-white/10 backdrop-blur-md rounded-2xl justify-between px-6 py-2 transition-all duration-300 w-full max-w-7xl"
         )}
       >
         {/* Logo (Left) */}
