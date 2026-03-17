@@ -39,7 +39,7 @@ export default function Intro() {
       </div>
 
       {/* Center Content: Image & Stats */}
-      <div className="relative w-full max-w-5xl flex flex-col items-center justify-end flex-1 md:h-[600px]">
+      <div className="relative w-full max-w-5xl flex-1 flex flex-col items-center justify-end flex-1 md:h-[600px]">
         
         {/* Background Semi-circle */}
         <motion.div
@@ -62,7 +62,7 @@ export default function Intro() {
               alt="Chamika Nuwantha"
               width={650}
               height={850}
-              className="object-contain h-full w-auto select-none pointer-events-none drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+              className="object-contain h-auto w-auto select-none pointer-events-none drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
               priority
             />
             
