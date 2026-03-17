@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function Intro() {
   return (
-    <section id="intro" className="relative h-[calc(100vh-1rem)] flex flex-col items-center justify-center overflow-hidden pt-20 pb-4 px-4 rounded-[30px] md:rounded-[40px] mx-2 md:mx-4 my-2 shadow-sm bg-[#fcfcfc]">
+    <section id="intro" className="relative h-[calc(100vh-1rem)] flex flex-col items-center justify-between overflow-hidden pt-20 pb-0 md:pb-4 px-4 rounded-[30px] md:rounded-[40px] mx-2 md:mx-4 my-2 shadow-sm bg-[#fcfcfc]">
       
       {/* Decorative background elements */}
       <div className="absolute top-[10%] left-[8%] hidden lg:block opacity-10 transform -rotate-12 pointer-events-none">
@@ -39,7 +39,7 @@ export default function Intro() {
       </div>
 
       {/* Center Content: Image & Stats */}
-      <div className="relative w-full max-w-5xl flex flex-col items-center justify-end h-[450px] md:h-[600px]">
+      <div className="relative w-full max-w-5xl flex flex-col items-center justify-end flex-1 md:h-[600px]">
         
         {/* Background Semi-circle */}
         <motion.div
