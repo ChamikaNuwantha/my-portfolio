@@ -30,6 +30,6 @@ export async function sendEmail(prevState: any, formData: FormData) {
     return { success: true };
   } catch (err: any) {
     console.error('Email action error:', err);
-    return { error: 'Something went wrong. Please try again later.' };
+    return { error: 'Something went wrong. Please try again later. ' };
   }
 }
