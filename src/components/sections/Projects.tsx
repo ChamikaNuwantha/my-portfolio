@@ -5,6 +5,18 @@ import { ExternalLink, Github, Folder } from 'lucide-react';
 
 const projects = [
   {
+    title: 'DOA Cost of Cultivation System',
+    description: 'Agricultural Data Management Platform. Developed key modules for cost calculation, crop management, and role-based profiles using a full-stack architecture.',
+    tech: ['Next.js', 'Redux', 'Node.js', 'MongoDB'],
+    github: 'https://github.com/ChamikaNuwantha',
+  },
+  {
+    title: 'Project Management System',
+    description: 'Role-Based Web Application featuring an examiner dashboard. Built and integrated RESTful APIs with Ballerina for smooth communication.',
+    tech: ['React.js', 'Ballerina', 'MySQL', 'AWS'],
+    github: 'https://github.com/ChamikaNuwantha',
+  },
+  {
     title: 'AI-Powered Parking Layout Design',
     description: 'A hybrid parking layout generation module combining Conditional GAN–based parameter generation with a rule-based engine to create adaptive, regulation-compliant designs.',
     tech: ['Python', 'AI/ML', 'cGAN', 'Rule-based Engine'],
@@ -16,18 +28,6 @@ const projects = [
     tech: ['C', 'Atmega32', 'Proteus', 'IoT'],
     github: 'https://github.com/ChamikaNuwantha',
   },
-  {
-    title: 'DOA Cost of Cultivation System',
-    description: 'Agricultural Data Management Platform. Developed key modules for cost calculation, crop management, and role-based profiles using a full-stack architecture.',
-    tech: ['Next.js', 'Redux', 'Node.js', 'MongoDB'],
-    github: 'https://github.com/ChamikaNuwantha',
-  },
-  {
-    title: 'Project Management System',
-    description: 'Role-Based Web Application featuring an examiner dashboard. Built and integrated RESTful APIs with Ballerina for smooth communication.',
-    tech: ['React.js', 'Ballerina', 'MySQL', 'AWS'],
-    github: 'https://github.com/ChamikaNuwantha',
-  }
 ];
 
 export default function Projects() {
